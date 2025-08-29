@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Anastasia Kalacheva — Portfolio</title>
+  <meta name="description" content="Business & Data Analyst — portfolio of Anastasia Kalacheva"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#fbf3ed;         /* page background (soft cream) */
+      --card:#fffaf6;       /* card background */
+      --ink:#2b2523;        /* primary text */
+      --muted:#6e645f;      /* secondary text */
+      --brand:#0f172a;      /* buttons / accents (near-black) */
+      --ring:rgba(0,0,0,.08);
+      --radius:20px;
+      --shadow:0 6px 24px rgba(15,23,42,.06);
+      --w:1200px;           /* max width */
+      --space:24px;         /* base spacing unit */
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.55;
+      scroll-behavior:smooth;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    /* Container */
+    .wrap{max-width:var(--w); margin:0 auto; padding:0 var(--space);}
+
+    /* Navbar */
+    .nav{
+      position:sticky; top:0; z-index:50; backdrop-filter:saturate(140%) blur(4px);
+      background:color-mix(in oklab, var(--bg) 88%, white);
+      border-bottom:1px solid var(--ring);
+    }
+    .nav-inner{display:flex; align-items:center; justify-content:space-between; height:72px;}
+    .brand{font-weight:800; letter-spacing:.2px}
+    .brand i{font-style:italic; font-weight:700}
+    .menu{display:flex; gap:28px; align-items:center}
+    .menu a{font-weight:500; opacity:.9}
+    .menu a:hover{opacity:1}
+    .btn{
+      display:inline-flex; align-items:center; gap:10px;
+      background:var(--brand); color:#fff; border-radius:999px; padding:10px 16px; font-weight:600;
+      box-shadow:0 6px 16px rgba(15,23,42,.12);
+    }
+    .btn.outline{
+      background:transparent; color:var(--ink); border:1px solid var(--ring); box-shadow:none;
+    }
+
+    /* Section shell */
+    section{padding:64px 0}
+    .card{
+      background:var(--card); box-shadow:var(--shadow); border-radius:var(--radius);
+      border:1px solid var(--ring); padding: clamp(20px, 4vw, 40px);
+    }
+
+    /* Hero two-column */
+    .hero{display:grid; grid-template-columns:1.2fr .8fr; gap:32px; align-items:center}
+    .hero h1{font-size:clamp(30px,4vw,44px); line-height:1.1; margin:0 0 16px; font-weight:800; letter-spacing:.2px}
+    .lead{color:var(--muted); font-size:clamp(16px,1.4vw,18px)}
+    .cta{display:flex; gap:12px; margin-top:20px; flex-wrap:wrap}
+
+    .headshot{
+      width: clamp(220px, 28vw, 320px); height: clamp(220px, 28vw, 320px);
+      border-radius:50%; object-fit:cover; margin-inline:auto;
+      border:8px solid #efe6dd; box-shadow:0 14px 34px rgba(0,0,0,.12);
+    }
+
+    /* Section headings */
+    .h2{font-size:clamp(22px,3vw,30px); font-weight:800; margin:0 0 18px}
+    .muted{color:var(--muted)}
+
+    /* Simple grid list cards */
+    .grid{display:grid; gap:16px}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    .item{background:#fff; border:1px solid var(--ring); border-radius:16px; padding:18px}
+    .item h3{margin:0 0 8px; font-size:18px}
+    .item small{color:var(--muted)}
+
+    /* Footer */
+    footer{padding:40px 0 60px; color:var(--muted); text-align:center}
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero{grid-template-columns:1fr; gap:24px}
+      .nav-inner{height:66px}
+      .menu{gap:18px}
+      .grid.cols-2{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="#top" class="brand"><i>Anastasia</i> Kalacheva</a>
+      <nav class="menu">
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#certs">Certifications</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+        <a class="btn outline" href="./Business%20Analyst_A%20Kalacheva_CV.pdf" download>Download CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="wrap">
+    <!-- HERO -->
+    <section id="hero">
+      <div class="card hero">
+        <div>
+          <h1>Business & Data Analyst</h1>
+          <p class="lead">
+            Hi, I’m <strong>Anastasia Kalacheva</strong>. I’m a business analyst and aspiring machine learning
+            engineer specialising in accessibility and practical, human-centred tools.
+          </p>
+          <p class="muted" style="margin-top:10px">
+            SQL · Python · Power BI · Tableau · Excel · Pandas · NumPy · PySpark · Data Visualization
+          </p>
+          <div class="cta">
+            <a class="btn" href="./Business%20Analyst_A%20Kalacheva_CV.pdf" download>Download CV</a>
+            <a class="btn outline" href="#contact">Contact</a>
+          </div>
+        </div>
+        <div>
+          <!-- Replace src with your photo path (square image recommended) -->
+          <img class="headshot" src="Anastasia.jpg" alt="Anastasia Kalacheva">
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <h2 class="h2">Work Experience</h2>
+      <div class="grid cols-2">
+        <article class="item">
+          <h3>Business Analyst — IT Consulting</h3>
+          <small>2022 — Present · Berlin</small>
+          <ul>
+            <li>Stakeholder alignment for web tools and analytics.</li>
+            <li>Designed metrics/dashboards; improved reporting throughput.</li>
+            <li>Automated workflows; reduced manual effort.</li>
+          </ul>
+        </article>
+        <article class="item">
+          <h3>Business/Data Analyst — Company</h3>
+          <small>2019 — 2022</small>
+          <ul>
+            <li>Owned forecasting & reporting for operations.</li>
+            <li>Built SQL/Python pipelines and self-serve dashboards.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2 class="h2">Projects</h2>
+      <div class="grid cols-2">
+        <article class="item">
+          <h3>Forecasting Dashboard</h3>
+          <small>Power BI · Python</small>
+          <p class="muted">Time-series forecast, scenario analysis, and alerting.</p>
+          <p><a href="#" class="btn outline">See details</a></p>
+        </article>
+        <article class="item">
+          <h3>Web App Events</h3>
+          <small>Analytics · Events · UX</small>
+          <p class="muted">Instrumented product events and built KPI views.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certs">
+      <h2 class="h2">Certifications</h2>
+      <div class="grid">
+        <article class="item"><h3>Power BI</h3><small>Microsoft</small></article>
+        <article class="item"><h3>AWS Practitioner</h3><small>Amazon</small></article>
+        <article class="item"><h3>Scrum Master</h3><small>Scrum.org</small></article>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <h2 class="h2">Education</h2>
+      <div class="grid">
+        <article class="item">
+          <h3>Software Engineering (Germany)</h3>
+          <small>Focus: System design & machine learning</small>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2 class="h2">Contact</h2>
+      <div class="card" style="display:grid; gap:14px;">
+        <p class="muted">You can reach me anytime via the details below:</p>
+        <p>Email: <a href="mailto:kalacheva.anastasya@gmail.com">kalacheva.anastasya@gmail.com</a></p>
+        <p>Phone: <a href="tel:+4917668293914">+49 176 682 93 914</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/kalacheva" target="_blank" rel="noreferrer">linkedin.com/in/kalacheva</a></p>
+        <p style="margin-top:10px"><a class="btn" href="mailto:kalacheva.anastasya@gmail.com">Email me</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>© <span id="y"></span> Anastasia Kalacheva · All rights reserved</p>
+    </div>
+  </footer>
+
+  <script>
+    // year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // active link highlighting (basic)
+    const links = document.querySelectorAll('.menu a[href^="#"]');
+    const sections = [...links].map(a => document.querySelector(a.getAttribute('href')));
+    function onScroll(){
+      const y = window.scrollY + 90;
+      let idx = 0;
+      sections.forEach((sec, i) => {
+        if (sec && y >= sec.offsetTop) idx = i;
+      });
+      links.forEach((a,i)=> a.style.opacity = i===idx ? '1' : '0.85');
+    }
+    document.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+  </script>
+</body>
+</html>
